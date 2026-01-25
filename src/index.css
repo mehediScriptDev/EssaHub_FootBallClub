@@ -24,39 +24,35 @@
   --text-6xl: 60px;
   --text-7xl: 72px;
 
-  /* Font Weights */
-  --font-thin: 100;
-  --font-extralight: 200;
-  --font-light: 300;
-  --font-normal: 400;
-  --font-medium: 500;
-  --font-semibold: 600;
-  --font-bold: 700;
-  --font-extrabold: 800;
-  --font-black: 900;
 
   /* ------ */
   /* COLORS */
   /* ------ */
   /* Core Colors */
   --color-primary: #f6bc09;
-  --color-nav-bg: #fafdfd;
-  --color-btn-primary: #0F766E;
-  --color-btn-secondary: #15A398;
+  
   --color-secondary: #E7F1F1;
   --color-accent: rgb(255, 255, 255);
   --color-background: #2b0731;
   --color-border-color: rgb(255, 255, 255);
   --color-black: #000;
   --color-white: #fff;
-  --color-secondary-text: #656565;
 
   /* Text Colors */
   --text-color-heading: #1f1f1f;
   --text-color-title: #0d263c;
-  --text-color-paragraph: #4b4b4b;
+  --text-color-subtitle: #101010;
+  --text-color-btn: #1C1C1C;
+  --text-color-cardTitle: #06322E;
+  --text-color-description: #3B3B3B;
+  
+  --color-secondary-text: #656565;
+  --text-color-navigation: #495572;
 
   /* Component Colors */
+  --color-nav-bg: #fafdfd;
+  --color-btn-primary: #0F766E;
+  --color-btn-secondary: #15A398;
   --color-card: rgb(25, 25, 25);
   --color-cta: rgb(0, 122, 255);
   --color-cta-active: rgb(0, 102, 215);
@@ -87,43 +83,6 @@
     font-family: var(--font-primary);
   }
 
-  h1 {
-    font-size: var(--text-6xl);
-    font-weight: var(--font-bold);
-    color: var(--text-color-heading);
-  }
-
-  h2 {
-    font-size: var(--text-4xl);
-    font-weight: var(--font-semibold);
-    color: var(--text-color-title);
-  }
-
-  h3 {
-    font-size: var(--text-2xl);
-    font-weight: var(--font-medium);
-    color: var(--text-color-title);
-  }
-
-  h4 {
-    font-size: var(--text-xl);
-    font-weight: var(--font-medium);
-    color: var(--text-color-title);
-  }
-
-  h5 {
-    font-size: var(--text-lg);
-    font-weight: var(--font-medium);
-    color: var(--text-color-title);
-  }
-
-  p {
-    font-size: var(--text-base);
-    font-family: var(--font-primary);
-    font-weight: var(--font-normal);
-    color: var(--text-color-paragraph);
-    line-height: 1.6;
-  }
 
   /* ----- */
   /* LINKS */
@@ -164,6 +123,8 @@
   html {
     scroll-behavior: smooth;
   }
+
+
 
   /* ===== Custom Scrollbar ===== */
 
@@ -217,6 +178,28 @@
 /* COMPONENTS           */
 /* ==================== */
 @layer components {
+
+  .herosubtitle {
+    @apply text-white/90 text-base lg:text-[20px] text-center;
+  }
+  .sectiontitle{
+    @apply font-semibold lg:text-[40px] text-[32px] leading-tight lg:leading-relaxed font-secondary text-[#313131];
+  }
+  
+  .subtitle {
+    @apply font-semibold text-[22px] lg:text-[28px] leading-tight lg:leading-relaxed;
+    color: var(--text-color-subtitle);
+  }
+  .description {
+    @apply text-lg leading-tight lg:leading-relaxed;
+    color: var(--text-color-description);
+  }
+
+  /* cta section */
+  .cta-title {
+    @apply font-semibold lg:text-[42px] lg:text-left text-center leading-tight text-3xl font-secondary text-white;
+  }
+
   /* BUTTONS */
   .btn-primary {
     @apply rounded-lg px-5 py-2.5 font-semibold text-white;
